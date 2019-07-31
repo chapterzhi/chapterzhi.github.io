@@ -1,51 +1,71 @@
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kronik3r/daktilo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+# jekyll-theme-console
 
-# Daktilo
-Daktilo is a [Jekyll](jekyllrb.com) theme with a minimal design inspired from typewriters.
+A jekyll theme with inspiration from linux consoles for hackers, developers and script kiddies.
 
-# More info and Live preview
-[Click here](http://daktilo.github.io/) to see the theme in action.
+<img src="https://raw.githubusercontent.com/b2a3e8/jekyll-theme-console/master/screenrec-dark.gif" width="550" title="Screenshot">
 
-# Features
-- Fully responsive
-- [Disqus](https://disqus.com/) integration for comments.
-- Google Analytics integration.
-- Syntax Highlighter (using [highlight.js](https://highlightjs.org/)).
-- Support for categories.
-- Font-Awesome Icons.
-- Optimized for SEO.
-- Coolest [404 page ever](http://kronik3r.github.io/daktilo/404.html).
+## Demo
 
-# How to use it
-Start by cloning the repository, then check the `_config.yml` file and change it accordingly.
-Note that the `title` property is what will be displayed as logo.
+[https://b2a3e8.github.io/jekyll-theme-console/](https://b2a3e8.github.io/jekyll-theme-console/)
 
-Finally execute `jekyll serve --watch` and head to [localhost:4000](http://127.0.0.1:4000) to see the result.
+source code: [https://github.com/b2a3e8/jekyll-theme-console/tree/gh-pages](https://github.com/b2a3e8/jekyll-theme-console/tree/gh-pages)
 
-# Using categories
-Categories are little bit tricky. Please make sure to do the following for each category:
 
-- Create a file within `categories` folder with the name of your category
-For example let's say that we have a category called `An Awesome Category` you will need to add an `an-awesome-category.html` file with this content:
+## Installation
 
-``` html
----
-layout: category
-category: an-awesome-category
-permalink: /categories/an-awesome-category/
----
+Add this line to your Jekyll site's `Gemfile`:
 
+```ruby
+gem "jekyll-theme-console"
 ```
 
-- Create an entry inside `_data/categories.yml`
+And add this line to your Jekyll site's `_config.yml`:
 
-``` html
-- slug: an-awesome-category
-  name: An Awesome Category
+```yaml
+theme: jekyll-theme-console
 ```
 
-- Then you will see it in the footer in the `Explore` section.
+And then execute:
 
-# License
+    $ bundle
 
-The contents of this repository is licensed under [The MIT License.](https://opensource.org/licenses/MIT)
+Or install it yourself as:
+
+    $ gem install jekyll-theme-console
+
+## Usage
+
+In addition to jekyll's default configuration options, you can provide:
+- `header_pages` to specify which pages should be displayed in navbar
+- `footer` string, which will be inserted on the end of the page (doesn't support markup, but html)
+- `google_analytics` tracking id (tracking will be enabled only in production environments)
+
+```yaml
+header_pages:
+  - index.md
+  - about.md
+
+style: dark # dark (default) or light
+
+footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
+
+google_analytics: UA-NNNNNNNN-N
+```
+
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/b2a3e8/jekyll-theme-console. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-console.gemspec` accordingly.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
