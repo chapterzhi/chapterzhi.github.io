@@ -1,126 +1,71 @@
-# BlackDoc
+# jekyll-theme-console
 
-![Jekyll version](https://img.shields.io/badge/Jekyll-3.x-brightgreen.svg?style=flat-square)
+A jekyll theme with inspiration from linux consoles for hackers, developers and script kiddies.
 
-BlackDoc is a two-column [Jekyll](http://jekyllrb.com) theme that's ideal for websites that require a master-detail layout for viewing of content. It's based on [Poole](http://getpoole.com), the Jekyll butler, and the [Hyde](http://hyde.getpoole.com) theme.
+<img src="https://raw.githubusercontent.com/b2a3e8/jekyll-theme-console/master/screenrec-dark.gif" width="550" title="Screenshot">
 
-![BlackDoc screenshot](https://raw.githubusercontent.com/karloespiritu/blackdoc/master/public/images/blackdoc-screenshot.jpg)
+## Demo
 
-## Contents
+[https://b2a3e8.github.io/jekyll-theme-console/](https://b2a3e8.github.io/jekyll-theme-console/)
 
-- [Features](#features)
-- [Quick Start](#quick-start)
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Scrolling sidebar content](#scrolling-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
-- [Thanks](#thanks)
+source code: [https://github.com/b2a3e8/jekyll-theme-console/tree/gh-pages](https://github.com/b2a3e8/jekyll-theme-console/tree/gh-pages)
 
-## Features
 
-* Now compatible with Jekyll 3.x
-* Two-column layout with scrolling sidebar content
-* Ideal for websites that require  master-detail view of content
+## Installation
 
-## Quick Start
+Add this line to your Jekyll site's `Gemfile`:
 
-Download the zip file or clone the BlackDoc repo.
-
-```bash
-$ git clone git@github.com:karloespiritu/BlackDoc.git mysite
-$ cd mysite
-```
-Make sure you have Ruby 2.2.5 or higher installed.
-
-```bash
-$ ruby --version
-ruby 2.2.5
+```ruby
+gem "jekyll-theme-console"
 ```
 
-Install bundler and install dependencies.
+And add this line to your Jekyll site's `_config.yml`:
 
-```bash
-$ gem install bundler
-$ bundle install
+```yaml
+theme: jekyll-theme-console
 ```
 
-Build and run your BlackDoc site.
+And then execute:
 
-```bash
-$ jekyll serve
-```
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install jekyll-theme-console
 
 ## Usage
 
-BlackDoc is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+In addition to jekyll's default configuration options, you can provide:
+- `header_pages` to specify which pages should be displayed in navbar
+- `footer` string, which will be inserted on the end of the page (doesn't support markup, but html)
+- `google_analytics` tracking id (tracking will be enabled only in production environments)
 
+```yaml
+header_pages:
+  - index.md
+  - about.md
 
-## Options
+style: dark # dark (default) or light
 
-BlackDoc includes some customizable options, typically applied via classes on the `<body>` element.
+footer: 'follow us on <a href="https://twitter.com/xxx">twitter</a>'
 
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
-
-```
----
-layout: page
-title: About
----
+google_analytics: UA-NNNNNNNN-N
 ```
 
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
 
+## Contributing
 
-### Scrolling sidebar content
+Bug reports and pull requests are welcome on GitHub at https://github.com/b2a3e8/jekyll-theme-console. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-By default, BlackDoc includes a scrolling sidebar that will display your markdown files in alphabetical order.
+## Development
 
-### Themes
+To set up your environment to develop this theme, run `bundle install`.
 
-BlackDoc ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/karloespiritu/blackdoc/blob/master/public/css/blackdoc.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-### Reverse layout
-
-![BlackDoc reverse screenshot](https://raw.githubusercontent.com/karloespiritu/BlackDoc/master/public/images/reverse-screenshot.png)
-
-BlackDoc's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-## Author
-
-**Karlo Espiritu**
-- <https://github.com/karloespiritu>
-- <https://twitter.com/karloespiritu>
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-console.gemspec` accordingly.
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md).
-
-\m/
-
-## Thanks
-
-Thanks to [@mdo](https://twitter.com/mdo) for creating the awesome [Poole](http://getpoole.com) project.
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
