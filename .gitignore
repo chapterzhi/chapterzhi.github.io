@@ -2,6 +2,7 @@
 _gh_pages
 _site
 .ruby-version
+.jekyll-metadata
 
 # Numerous always-ignore extensions
 *.diff
@@ -29,21 +30,5 @@ nbproject
 *.sublime-workspace
 .idea
 
-# Komodo
-*.komodoproject
-.komodotools
-
-# grunt-html-validation
-validation-status.json
-validation-report.json
-
 # Folders to ignore
 node_modules
-.sass-cache
-
-# Dev stuff
-Makefile
-Gemfile.lock
-_config.dev.yml
-.vscode
-*.gem
