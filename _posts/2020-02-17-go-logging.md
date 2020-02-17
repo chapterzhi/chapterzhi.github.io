@@ -8,8 +8,8 @@ tags:
 ---
 
 github.com/op/go-logging  第三方日志包
-
-```
+使用实例如下:
+```go
 package main
 
 import (
@@ -60,3 +60,16 @@ func main() {
     log.Critical("crit")
 }
 ```
+
+输出:
+```
+22:42:39.831 main > DEBU 001 debug ******
+22:42:39.831 main > INFO 002 info
+22:42:39.831 main > NOTI 003 notice
+22:42:39.831 main > WARN 004 warning
+err
+22:42:39.831 main > ERRO 005 err
+crit
+22:42:39.831 main > CRIT 006 crit
+```
+![RUNOOB 图标](.\2.png "RUNOOB")
