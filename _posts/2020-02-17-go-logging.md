@@ -7,7 +7,7 @@ tags:
 - go
 ---
 
-github.com/op/go-logging  第三方日志包
+github.com/op/go-logging  第三方日志包  
 使用实例如下:
 ```go
 package main
@@ -61,7 +61,7 @@ func main() {
 }
 ```
 
-输出:
+输出1:
 ```
 22:42:39.831 main > DEBU 001 debug ******
 22:42:39.831 main > INFO 002 info
@@ -72,4 +72,4 @@ err
 crit
 22:42:39.831 main > CRIT 006 crit
 ```
-![RUNOOB 图标](2.png "RUNOOB")
+![RUNOOB 图标](./2.png "RUNOOB")
