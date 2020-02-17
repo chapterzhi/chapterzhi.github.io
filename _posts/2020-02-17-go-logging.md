@@ -72,4 +72,4 @@ err
 crit
 22:42:39.831 main > CRIT 006 crit
 ```
-![RUNOOB 图标](.\2.png "RUNOOB")
+![RUNOOB 图标](2.png "RUNOOB")
