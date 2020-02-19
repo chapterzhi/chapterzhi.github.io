@@ -8,7 +8,7 @@ tags:
 ---
 
 github.com/op/go-logging  第三方日志包  
-使用实例如下:
+使用实例如下:  
 ```go
 package main
 
