@@ -4,7 +4,7 @@ date: 2020-02-17 22:39:24
 categories:
 - go
 tags: 
-- go
+- go-logging
 ---
 
 github.com/op/go-logging  第三方日志包  
@@ -54,7 +54,7 @@ func main() {
     // Set the backends to be used.
     logging.SetBackend(backend1Leveled, backend2Formatter) // 设置终端，这里设置了两个，可以只设置一个
 
-    log.Debugf("debug %s", Password("secret"))
+    log.Debugf("debug %s", Password("secret"))             //Debug 后加 f 是为了将 %s 格式化处理
     log.Info("info")
     log.Notice("notice")
     log.Warning("warning")
